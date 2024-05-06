@@ -8,7 +8,7 @@ const pharmacieSchema = new mongoose.Schema({
   OpenHour: { type: String,required: true },
   CloseHour: { type: String,required: true },
   adress: { type: String,required: true },
-  isEmergencyPharmacy: { type: String,required: true },
+  isEmergencyPharmacy: { type: Boolean, required: true },
   locality: { type: String,required: true },
 });
 
