@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const {setupMedicament} = require('./medicament.route')
 const {setupPharmacie} = require('./pharmacie.routes')
+const {setupUser} = require('./user.route')
 /* GET home page. */
 // Define a route for the home page ('/') that renders the 'index' template with the title 'Bibemella'.
 router.get('/', function(req, res, next) {
@@ -17,6 +18,7 @@ const setupAppRoutes = () => {
   const app = router;
   setupMedicament(app);
   setupPharmacie(app);
+  setupUser(app);
   return app;
 }
 

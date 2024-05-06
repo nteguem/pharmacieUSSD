@@ -50,6 +50,6 @@ app.use((err, req, res, next) => {
 });
 
 // Start the app
-server.listen(6000, () => {
+server.listen(4040, () => {
   console.log("Server started");
 });
