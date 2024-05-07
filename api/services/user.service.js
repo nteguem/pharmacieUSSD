@@ -53,7 +53,7 @@ async function authenticateUser(username, password) {
       return { success: false, error: 'Nom d\'utilisateur ou mot de passe incorrect' };
     }
     const token = generateToken(user);
-    return { success: true, token };
+    return { success: true, token ,user };
   } catch (error) {
     return { success: false, error: error.message };
   }

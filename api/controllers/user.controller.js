@@ -53,7 +53,7 @@ async function loginUser(req, res) {
   const { username, password } = req.body;
   const response = await UserService.authenticateUser(username, password);
   if (response.success) {
-    return ResponseService.success(res, { token: response.token });
+    return ResponseService.success(res, { token: response.token , user:response.user });
   } else {
     return ResponseService.unauthorized(res, { error: response.error });
   }

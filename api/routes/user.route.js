@@ -9,7 +9,7 @@ const userHandler = require('../controllers/user.controller');
 const setupUser = (app) => {
     // Mount the 'router' to handle routes with the base path '/user'.
     app.use("/user", router);
-    router.get('/login', userHandler.loginUser);
+    router.post('/login', userHandler.loginUser);
     router.get('/list', userHandler.listUsers);
     router.post('/add', userHandler.createUser);
     // router.get('/download', userHandler.generateAndDownloadCSV);
