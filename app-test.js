@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = 2500;
+const port = 3000;
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -12,7 +12,11 @@ app.get('/', (req, res) => {
 
 app.get('/run-puppeteer', async (req, res) => {
   try {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({
+      headless: true, // headless: false si vous voulez voir le navigateur
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
+
     const page = await browser.newPage();
     const downloadPath = path.resolve('./downloads');
 
