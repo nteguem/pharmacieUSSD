@@ -2,7 +2,7 @@
   "name": "makeka-api-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "pharmacie.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
@@ -24,11 +24,14 @@
     "mongoose": "^7.4.3",
     "node-cron": "^3.0.3",
     "nodemon": "^3.0.1",
+    "path": "^0.12.7",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^1.1.1",
     "pdf-text-extract": "^1.5.0",
     "pdfkit": "^0.13.0",
+    "puppeteer": "^22.12.1",
     "socket.io": "^4.7.4",
+    "tesseract.js": "^5.1.0",
     "whatsapp-web.js": "^1.23.0",
     "winston": "^3.13.0"
   }
